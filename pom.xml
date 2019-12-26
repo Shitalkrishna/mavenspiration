@@ -18,8 +18,8 @@
                     <configuration>
                         <publisher>
                             <contextUrl>http://15.206.147.29/:8081/artifactory</contextUrl>
-                            <username>admin</username>
-                            <password>password</password>
+                            <username>demo</username>
+                            <password>Devops@1234</password>
                             <repoKey>libs-release-local</repoKey>
                             <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
                         </publisher>
