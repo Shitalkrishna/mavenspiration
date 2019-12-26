@@ -4,12 +4,21 @@
   <artifactId>maven-tutorial</artifactId>
   <version>1.0.2-SNAPSHOT</version>
   
- 
+  <pluginRepositories>
+    <pluginRepository>
+      <id>Maven-Artifactory-Plugin</id>
+      <url>https://jcenter.bintray.com</url>
+    </pluginRepository>
+  </pluginRepositories> 
   
   <build>
     <plugins>
         <plugin>
-             <executions>
+            <groupId>org.jfrog.buildinfo</groupId>
+            <artifactId>artifactory-maven-plugin</artifactId>
+            <version>2.6.1</version>
+            <inherited>false</inherited>
+            <executions>
                 <execution>
                     <id>build-info</id>
                     <goals>
@@ -17,9 +26,9 @@
                     </goals>
                     <configuration>
                         <publisher>
-                            <contextUrl>http://15.206.147.29/:8081/artifactory</contextUrl>
-                            <username>demo</username>
-                            <password>Devops@1234</password>
+                            <contextUrl>http://15.206.147.29:8081/artifactory</contextUrl>
+                            <username>admin</username>
+                            <password>password</password>
                             <repoKey>libs-release-local</repoKey>
                             <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
                         </publisher>
@@ -30,3 +39,4 @@
     </plugins>
 </build>
 </project>
+© 2019 GitHub, Inc.
